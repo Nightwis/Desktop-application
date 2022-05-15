@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<StackPane id="AnchorPane" fx:id="root" prefHeight="360.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wl.project.pay.controller.RootMainController">
+    <children>
+        <AnchorPane style="-fx-background-color: #FFFFFF;">
+            <children>
+                <ImageView fitHeight="360.0" fitWidth="180.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../image/lbxx1.jpeg" />
+                    </image>
+                </ImageView>
+                <JFXHamburger fx:id="hamburger" layoutX="461.0" layoutY="20.0" />
+                <JFXButton fx:id="b1" buttonType="RAISED" layoutX="226.0" layoutY="277.0" onAction="#runAction" prefHeight="50.0" prefWidth="100.0" ripplerFill="NAVAJOWHITE" style="-fx-background-color: #FF8C00;" text="Run">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXButton fx:id="b2" buttonType="RAISED" layoutX="366.0" layoutY="277.0" onAction="#miniAction" prefHeight="50.0" prefWidth="100.0" ripplerFill="NAVAJOWHITE" style="-fx-background-color: #FF8C00;" text="迷你">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXTextField fx:id="text_amount" focusColor="#262628" labelFloat="true" layoutX="368.0" layoutY="137.0" prefHeight="31.0" prefWidth="92.0" promptText="金额：" unFocusColor="DARKORANGE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="text_channelId" focusColor="#4a4844" labelFloat="true" layoutX="230.0" layoutY="137.0" prefHeight="36.0" prefWidth="92.0" promptText="通道值：" unFocusColor="DARKORANGE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </JFXTextField>
+                <JFXRadioButton fx:id="isTest" layoutX="230.0" layoutY="210.0" selected="true" text="测试" textFill="#252424fc">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXRadioButton>
+                <JFXButton buttonType="RAISED" layoutX="376.0" layoutY="208.0" onAction="#alert" ripplerFill="#c360e8" style="-fx-background-color: #e6e6fa;" text="更改地址" textAlignment="CENTER">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <JFXTextField fx:id="text_userId" focusColor="#4a4844" labelFloat="true" layoutX="230.0" layoutY="81.0" prefHeight="36.0" prefWidth="92.0" promptText="用户ID：" unFocusColor="DARKORANGE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </JFXTextField>
+                <JFXTextField fx:id="text_gameId" focusColor="#262628" labelFloat="true" layoutX="368.0" layoutY="81.0" prefHeight="31.0" prefWidth="92.0" promptText="游戏ID：" unFocusColor="DARKORANGE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </JFXTextField>
+                <Label layoutX="322.0" layoutY="106.0" text="（选填）">
+                    <font>
+                        <Font size="9.0" />
+                    </font>
+                </Label>
+                <Label layoutX="458.0" layoutY="106.0" text="（选填）">
+                    <font>
+                        <Font size="9.0" />
+                    </font>
+                </Label>
+                <JFXDrawer fx:id="drawer" defaultDrawerSize="200.0" layoutY="-6.0" prefHeight="368.0" prefWidth="108.0" />
+                <JFXDialog fx:id="dialog">
+                    <content>
+                        <JFXDialogLayout>
+                            <heading>
+                                <Label>更新测试地址</Label>
+                            </heading>
+                            <body>
+                                <JFXTextField fx:id="text_url" focusColor="#262628" layoutX="374.0" layoutY="76.0" prefHeight="31.0" prefWidth="300.0" promptText="tip:http://xxx/api/payproject/req" unFocusColor="DARKORANGE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </JFXTextField>
+                            </body>
+                            <actions>
+                                <JFXButton buttonType="RAISED" onAction="#closeAndupd" prefHeight="30" prefWidth="60" ripplerFill="#c360e8" style="-fx-background-color: #e6e6fa;" text="确认" textAlignment="CENTER">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" onAction="#close" prefHeight="30" prefWidth="60" ripplerFill="#c360e8" style="-fx-background-color: #e6e6fa;" text="取消" textAlignment="CENTER">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                            </actions>
+                        </JFXDialogLayout>
+                    </content>
+                </JFXDialog>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

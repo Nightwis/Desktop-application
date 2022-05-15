@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.Image?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wl.project.pay.controller.SidePanelController">
+    <children>
+        <ImageView fitHeight="360.0" fitWidth="508.0" pickOnBounds="true">
+            <image>
+                <Image url="@../image/back.png" />
+            </image>
+        </ImageView>
+        <Pane opacity="0.45" prefHeight="352.0" prefWidth="522.0" style="-fx-background-color: #000000;">
+         <children>
+            <Text fill="WHITE" layoutX="163.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="——支付百宝箱——" wrappingWidth="182.51953125">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+              <Text fill="WHITE" layoutX="111.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME">
+                  <font>
+                      <Font name="Roboto Medium" size="56.0" />
+                  </font>
+              </Text>
+         </children></Pane>
+    </children>
+</StackPane>

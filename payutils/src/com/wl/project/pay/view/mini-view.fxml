@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="60.0" prefWidth="480.0" style="-fx-background-color: #696969;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wl.project.pay.controller.MiniViewController">
+    <children>
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" >
+            <Image url="@../image/qiandai.png"/>
+        </ImageView>
+        <JFXRadioButton fx:id="isTest" layoutX="101.0" layoutY="25.0" selected="true" text="测试" textFill="#f5f4f4" />
+        <JFXTextField fx:id="text_channelId" focusColor="#d9ebe3" layoutX="195.0" layoutY="15.0" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #c0c0c0;" promptText="  通道ID" >
+            <font>
+                <Font size="14.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="text_amount" focusColor="#d9ebe3" layoutX="281.0" layoutY="15.0" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: #c0c0c0;" promptText="   金额" >
+            <font>
+                <Font size="14.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton onAction="#runAction" buttonType="RAISED" layoutX="376.0" layoutY="15.0" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: green;" text="Run" textFill="#fcf9f9" >
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton onAction="#backAction" layoutX="450.0" layoutY="-5.0" prefHeight="36.0" prefWidth="38.0" style="-fx-border-style: none;" text="" textAlignment="CENTER" textFill="#f2eaea">
+            <font>
+                <Font size="18.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../image/exit.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+    </children>
+</AnchorPane>

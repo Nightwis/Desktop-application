@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="360.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wl.project.pay.controller.PayoutViewController">
+    <children>
+        <TextArea fx:id="textare_payout_param" layoutX="23.0" layoutY="44.0" prefHeight="217.0" prefWidth="136.0" promptText="tip：一行一个参数" />
+        <JFXButton fx:id="btnParam" buttonType="RAISED" layoutX="43.0" layoutY="281.0" onAction="#paramAction" prefHeight="23.0" prefWidth="97.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text="生成">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="43.0" layoutY="323.0" onAction="#copyAction" prefHeight="23.0" prefWidth="97.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text="复制">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <Separator layoutX="183.0" orientation="VERTICAL" prefHeight="360.0" prefWidth="6.0" />
+        <TextArea fx:id="textare_bank_param" layoutX="207.0" layoutY="45.0" prefHeight="109.0" prefWidth="274.0" promptText="需要格式化的编码" />
+        <TextArea fx:id="textare_bank_json" layoutX="207.0" layoutY="221.0" prefHeight="83.0" prefWidth="274.0" promptText="格式化后JSON串" />
+        <Text layoutX="302.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="银行编码格式化" />
+        <Text layoutX="55.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="代付请求参数" />
+        <Separator layoutY="31.0" prefHeight="0.0" prefWidth="185.0" />
+        <JFXButton buttonType="RAISED" layoutX="207.0" layoutY="323.0" onAction="#formatAction" prefHeight="23.0" prefWidth="72.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text="格式化">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton onAction="#backAction" buttonType="RAISED" layoutX="409.0" layoutY="323.0" prefHeight="23.0" prefWidth="72.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text="返回">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXToggleButton fx:id="jfx_tb" onAction="#isSelectedAction" layoutX="219.0" layoutY="158.0" prefHeight="58.0" prefWidth="208.0" selected="true" text="银行名称-&gt;编码" textAlignment="CENTER" toggleColor="#079a07" toggleLineColor="#1dbf5b" />
+    </children>
+</AnchorPane>

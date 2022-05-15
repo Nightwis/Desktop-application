@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane fx:id="payroot" prefHeight="360.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.wl.project.pay.controller.PayViewController">
+    <children>
+        <JFXTextField fx:id="payId" focusColor="DARKORANGE" layoutX="24.0" layoutY="22.0" prefHeight="29.0" prefWidth="65.0" promptText="支付ID：">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="paramName" focusColor="DARKORANGE" layoutX="109.0" layoutY="22.0" prefHeight="29.0" prefWidth="91.0" promptText="参数名：">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </JFXTextField>
+        <JFXComboBox fx:id="paramReplace" focusColor="DARKORANGE" layoutX="219.0" layoutY="22.0" prefHeight="29.0" prefWidth="117.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="text" />
+                    <String fx:value="URLEncoder" />
+                    <String fx:value="random{{位数}}" />
+                    <String fx:value="appId" />
+                    <String fx:value="privateKey1" />
+                    <String fx:value="userId" />
+                    <String fx:value="gameId" />
+                    <String fx:value="createIp" />
+                    <String fx:value="orderId" />
+                    <String fx:value="amount" />
+                    <String fx:value="amount2" />
+                    <String fx:value="amount4" />
+                    <String fx:value="amountFen" />
+                    <String fx:value="timestamp" />
+                    <String fx:value="timestamp2" />
+                    <String fx:value="createTime" />
+                    <String fx:value="createTime2" />
+                    <String fx:value="createTime3" />
+                    <String fx:value="createTime4" />
+                    <String fx:value="callbackUrl" />
+                    <String fx:value="notifyUrl" />
+                    <String fx:value="notifyUrl2" />
+                    <String fx:value="notifyUrl3" />
+                    <String fx:value="notifyUrl3Headers" />
+                    <String fx:value="notifyJson" />
+                    <String fx:value="md5Upper" />
+                    <String fx:value="md5Lower" />
+                </FXCollections>
+            </items>
+            <value>
+                <String fx:value="text" />
+            </value>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXComboBox>
+        <JFXTextField fx:id="count" focusColor="DARKORANGE" layoutX="356.0" layoutY="22.0" prefHeight="29.0" prefWidth="41.0" promptText="个数：">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton onAction="#addAction" layoutX="424.0" layoutY="25.0" prefHeight="29.0" prefWidth="65.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text=" 添加" >
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@../image/add.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <TableView fx:id="tableConfig" layoutX="11.0" layoutY="69.0" prefHeight="249.0" prefWidth="487.0">
+            <columns>
+                <TableColumn fx:id="tcid" prefWidth="61.0" text="id" />
+                <TableColumn fx:id="tcindex" prefWidth="41.0" text="index" />
+                <TableColumn fx:id="tccid" prefWidth="44.0" text="cid" />
+                <TableColumn fx:id="tcname" prefWidth="87.0" text="name" />
+                <TableColumn fx:id="tcvalue" prefWidth="87.0" text="value" />
+                <TableColumn fx:id="tctype" prefWidth="60.0" text="type" />
+                <TableColumn fx:id="tcpush" prefWidth="52.0" text="push" />
+                <TableColumn fx:id="tcenum" prefWidth="54.0" text="enum" />
+            </columns>
+        </TableView>
+        <JFXButton onAction="#reqAction" layoutX="57.0" layoutY="323.0" prefHeight="21.0" prefWidth="65.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text="请求签名" >
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton onAction="#notifyAction" layoutX="135.0" layoutY="323.0" prefHeight="21.0" prefWidth="65.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text="回调签名" >
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton onAction="#copyAction" layoutX="213.0" layoutY="323.0" prefHeight="21.0" prefWidth="65.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text="复制" >
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton onAction="#resetAction" layoutX="291.0" layoutY="323.0" prefHeight="21.0" prefWidth="65.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text="重置" >
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXButton onAction="#backAction" layoutX="370.0" layoutY="323.0" prefHeight="21.0" prefWidth="65.0" ripplerFill="GOLD" style="-fx-background-color: #FF8C00;" text="返回" >
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXButton>
+        <JFXDialog fx:id="notifydialog">
+            <JFXDialogLayout>
+                <heading>
+                    <Label>回调参数:</Label>
+                </heading>
+                <body>
+                    <JFXTextArea fx:id="textare" focusColor="#262628" prefHeight="200.0" prefWidth="100.0" promptText="tip:一行一个参数" unFocusColor="DARKORANGE">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </JFXTextArea>
+                </body>
+                <actions>
+                    <JFXButton  onAction="#closeAndupd" prefHeight="30" prefWidth="60"  buttonType="RAISED"  ripplerFill="#c360e8" style="-fx-background-color: #e6e6fa;" text="确认" textAlignment="CENTER" >
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </JFXButton>
+                    <JFXButton  onAction="#close" prefHeight="30" prefWidth="60"  buttonType="RAISED"  ripplerFill="#c360e8" style="-fx-background-color: #e6e6fa;" text="取消" textAlignment="CENTER" >
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </JFXButton>
+                </actions>
+            </JFXDialogLayout>
+        </JFXDialog>
+    </children>
+</AnchorPane>
